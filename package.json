@@ -1,10 +1,6 @@
 {
   "name": "bookstore",
   "version": "0.1.0",
-  "engines": {
-    "node": "14.x",
-    "npm": "7.11.2"
-  },
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
