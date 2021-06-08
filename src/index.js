@@ -6,33 +6,25 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import reducer from './reducers/books';
-
-const uniqueIds = [];
-const generateUniqueId = () => {
-  const newId = Math.floor(Math.random() * 1000);
-  if (!uniqueIds.includes(newId)) {
-    uniqueIds.push(newId);
-    return newId;
-  }
-  return generateUniqueId();
-};
+import { generateUniqueId } from './containers/BooksForm';
 
 const initialState = {
-  books: [{
-    id: generateUniqueId(),
-    title: '48 Laws Of Power',
-    category: 'Learning',
-  },
-  {
-    id: generateUniqueId(),
-    title: 'Deep Work',
-    category: 'Horror',
-  },
-  {
-    id: generateUniqueId(),
-    title: 'Dead Aid',
-    category: 'Sci-Fi',
-  },
+  books: [
+    {
+      id: generateUniqueId(),
+      title: '48 Laws Of Power',
+      category: 'Learning',
+    },
+    {
+      id: generateUniqueId(),
+      title: 'Deep Work',
+      category: 'Horror',
+    },
+    {
+      id: generateUniqueId(),
+      title: 'Dead Aid',
+      category: 'Sci-Fi',
+    },
   ],
 };
 

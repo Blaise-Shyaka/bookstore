@@ -1,13 +1,28 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import { removeBook } from '../reducers/index';
 
 function BooksList(props) {
-  const { books } = props;
+  const { books, removebook } = props;
+
+  function handleRemoveBook(book) {
+    const bookOfInterest = books.find((bookElt) => book.id === bookElt.id);
+    removebook(bookOfInterest);
+  }
 
   const booksMarkup = books.map((book) => {
     const { id, title, category } = book;
-    return (<Book key={id} id={id} title={title} category={category} />);
+    return (
+      <Book
+        key={id}
+        id={id}
+        title={title}
+        category={category}
+        clickhandler={handleRemoveBook}
+        book={book}
+      />
+    );
   });
 
   return (
@@ -26,13 +41,13 @@ function BooksList(props) {
   );
 }
 const mapStateToProps = (state) => state;
-
-export default connect(mapStateToProps, null)(BooksList);
+const mapDispatchToProps = (dispatch) => ({
+  removebook: (book) => dispatch(removeBook(book)),
+});
 
 BooksList.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape(
-      [{ id: 3748, title: 'some title', category: 'category' }],
-    ),
-  ).isRequired,
+  books: PropTypes.arrayOf(PropTypes.object).isRequired,
+  removebook: PropTypes.func.isRequired,
 };
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
