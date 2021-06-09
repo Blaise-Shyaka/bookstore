@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook, removeBook } from '../reducers';
 
+export const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 export const uniqueIds = [];
 export const generateUniqueId = () => {
   const newId = Math.floor(Math.random() * 1000);
@@ -14,7 +15,6 @@ export const generateUniqueId = () => {
 };
 
 function generateCategories() {
-  const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const options = CATEGORIES.map((category) => (
     <option
       key={CATEGORIES.indexOf(category)}
