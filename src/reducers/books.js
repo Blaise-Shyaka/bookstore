@@ -1,6 +1,27 @@
 import { CREATEBOOK, REMOVEBOOK } from '../actions/index';
+import { generateUniqueId } from '../containers/BooksForm';
 
-const reducer = (state, action) => {
+const initialState = {
+  books: [
+    {
+      id: generateUniqueId(),
+      title: '48 Laws Of Power',
+      category: 'Learning',
+    },
+    {
+      id: generateUniqueId(),
+      title: 'Deep Work',
+      category: 'Horror',
+    },
+    {
+      id: generateUniqueId(),
+      title: 'Dead Aid',
+      category: 'Sci-Fi',
+    },
+  ],
+};
+
+const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATEBOOK:
       return { books: [...state.books, action.payload] };
@@ -15,4 +36,4 @@ const reducer = (state, action) => {
   }
 };
 
-export default reducer;
+export default booksReducer;

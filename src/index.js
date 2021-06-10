@@ -1,34 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-import reducer from './reducers/books';
-import { generateUniqueId } from './containers/BooksForm';
+import booksReducer from './reducers/books';
+import changeFilterReducer from './reducers/filter';
 
-const initialState = {
-  books: [
-    {
-      id: generateUniqueId(),
-      title: '48 Laws Of Power',
-      category: 'Learning',
-    },
-    {
-      id: generateUniqueId(),
-      title: 'Deep Work',
-      category: 'Horror',
-    },
-    {
-      id: generateUniqueId(),
-      title: 'Dead Aid',
-      category: 'Sci-Fi',
-    },
-  ],
-};
-
-const store = createStore(reducer, initialState);
+const reducer = combineReducers({ booksReducer, changeFilterReducer });
+const store = createStore(reducer);
 
 ReactDOM.render(
   <React.StrictMode>

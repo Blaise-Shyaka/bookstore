@@ -1,2 +1,3 @@
 export const CREATEBOOK = 'CREATE_BOOK';
 export const REMOVEBOOK = 'REMOVE_BOOK';
+export const CHANGEFILTER = 'CHANGE_FILTER';

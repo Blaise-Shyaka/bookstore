@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook, removeBook } from '../reducers';
 
+export const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 export const uniqueIds = [];
 export const generateUniqueId = () => {
   const newId = Math.floor(Math.random() * 1000);
@@ -13,8 +14,7 @@ export const generateUniqueId = () => {
   return generateUniqueId();
 };
 
-function generateCategories() {
-  const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+export function generateCategories() {
   const options = CATEGORIES.map((category) => (
     <option
       key={CATEGORIES.indexOf(category)}
@@ -67,6 +67,7 @@ function BooksForm(props) {
     <form>
       <input type="text" placeholder="Book Title" onChange={handleChange} />
       <select onChange={handleChange}>
+        <option selected disabled>Choose Book Category</option>
         {options}
       </select>
       <button type="submit" onClick={(e) => handleSubmit(e)}>Submit</button>
