@@ -14,7 +14,7 @@ export const generateUniqueId = () => {
   return generateUniqueId();
 };
 
-function generateCategories() {
+export function generateCategories() {
   const options = CATEGORIES.map((category) => (
     <option
       key={CATEGORIES.indexOf(category)}
@@ -67,6 +67,7 @@ function BooksForm(props) {
     <form>
       <input type="text" placeholder="Book Title" onChange={handleChange} />
       <select onChange={handleChange}>
+        <option selected disabled>Choose Book Category</option>
         {options}
       </select>
       <button type="submit" onClick={(e) => handleSubmit(e)}>Submit</button>
