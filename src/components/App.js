@@ -6,8 +6,10 @@ function App() {
   return (
     <div>
       <Nav />
-      <BooksForm />
-      <BooksList />
+      <div className="container">
+        <BooksForm />
+        <BooksList />
+      </div>
     </div>
   );
 }
