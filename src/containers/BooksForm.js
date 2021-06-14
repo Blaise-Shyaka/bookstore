@@ -64,14 +64,18 @@ function BooksForm(props) {
   }
 
   return (
-    <form>
-      <input type="text" placeholder="Book Title" onChange={handleChange} />
-      <select onChange={handleChange}>
-        <option selected disabled>Choose Book Category</option>
-        {options}
-      </select>
-      <button type="submit" onClick={(e) => handleSubmit(e)}>Submit</button>
-    </form>
+    <div>
+      <hr />
+      <h1>ADD NEW BOOK</h1>
+      <form>
+        <input type="text" placeholder="Book Title" onChange={handleChange} />
+        <select onChange={handleChange}>
+          <option selected disabled>Choose Book Category</option>
+          {options}
+        </select>
+        <button type="submit" onClick={(e) => handleSubmit(e)}>Submit</button>
+      </form>
+    </div>
   );
 }
 

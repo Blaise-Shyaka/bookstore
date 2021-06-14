@@ -41,18 +41,9 @@ function BooksList(props) {
   return (
     <div>
       <CategoryFilter changehandler={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th> Book Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {booksMarkup}
-        </tbody>
-      </table>
+      <div>
+        {booksMarkup}
+      </div>
     </div>
   );
 }
