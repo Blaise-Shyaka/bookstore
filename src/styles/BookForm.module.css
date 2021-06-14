@@ -5,7 +5,7 @@
 }
 
 .header {
-  font-family: 'MontSerrat';
+  font-family: 'MontSerrat', sans-serif;
   color: #888;
   font-size: 20px;
 }
