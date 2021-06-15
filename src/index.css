@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 body {
   margin: 0;
   font-family:
@@ -14,6 +17,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
 }
 
 code {
@@ -24,4 +28,17 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+.container {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
 }

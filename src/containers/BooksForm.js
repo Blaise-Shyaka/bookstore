@@ -2,6 +2,12 @@ import { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook, removeBook } from '../reducers';
+import * as formStyles from '../styles/BookForm.module.css';
+import { updateProgress } from '../styles/Book.module.css';
+
+const {
+  horizontalRule, header, input, addTitle, addTitleBtn, form,
+} = formStyles;
 
 export const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 export const uniqueIds = [];
@@ -64,14 +70,18 @@ function BooksForm(props) {
   }
 
   return (
-    <form>
-      <input type="text" placeholder="Book Title" onChange={handleChange} />
-      <select onChange={handleChange}>
-        <option selected disabled>Choose Book Category</option>
-        {options}
-      </select>
-      <button type="submit" onClick={(e) => handleSubmit(e)}>Submit</button>
-    </form>
+    <div className={form}>
+      <hr className={horizontalRule} />
+      <h1 className={header}>ADD NEW BOOK</h1>
+      <form>
+        <input className={`${input} ${addTitle}`} type="text" placeholder="Book Title" onChange={handleChange} />
+        <select onChange={handleChange} className={input}>
+          <option selected disabled>Choose Book Category</option>
+          {options}
+        </select>
+        <button className={`${updateProgress} ${addTitleBtn}`} type="submit" onClick={(e) => handleSubmit(e)}>Submit</button>
+      </form>
+    </div>
   );
 }
 

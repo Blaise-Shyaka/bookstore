@@ -1,0 +1,41 @@
+.navWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding-left: 100px;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.displayFlex {
+  display: flex;
+  width: 50%;
+}
+
+.logo {
+  font-size: 30px;
+  color: #0290ff;
+  margin-right: 47px;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.listItemOne {
+  color: #121212;
+}
+
+.listItemTwo {
+  color: #8b8b8b;
+}
+
+.userAvatar {
+  margin-right: 100px;
+}

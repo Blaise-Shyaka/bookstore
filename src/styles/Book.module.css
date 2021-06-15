@@ -1,0 +1,71 @@
+.displayFlex {
+  display: flex;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.bookTitle,
+.bookLinks,
+.chapter {
+  font-family: 'Roboto', sans-serif;
+}
+
+.bookCategory,
+.completionPercentage {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bookContainer {
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 27px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #e8e8e8;
+}
+
+.bookCategory {
+  font-weight: 600;
+  color: #8b8b8b;
+}
+
+.bookTitle {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.bookLinks {
+  font-size: 15px;
+  color: #4386bf;
+  font-weight: 100;
+  margin-right: 10px;
+}
+
+.removeBook {
+  background-color: #fff;
+  border: none;
+}
+
+.completionPercentage {
+  font-size: 32px;
+}
+
+.completed {
+  color: #8b8b8b;
+  font-size: 15px;
+}
+
+.chapterTitle {
+  color: #8b8b8b;
+}
+
+.updateProgress {
+  background-color: #4386bf;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+}
