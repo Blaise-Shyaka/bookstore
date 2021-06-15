@@ -6,11 +6,14 @@
   align-items: center;
 }
 
-.bookTitle, .bookLinks, .chapter {
+.bookTitle,
+.bookLinks,
+.chapter {
   font-family: 'Roboto', sans-serif;
 }
 
-.bookCategory, .completionPercentage {
+.bookCategory,
+.completionPercentage {
   font-family: 'Montserrat', sans-serif;
 }
 
